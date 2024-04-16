@@ -1,0 +1,11 @@
+{% paginate collection.products by 1 %}
+    COLLECTION ITEMS
+    <h1>{{ collection.title }}</h1>
+
+
+    {% for product in collection.products %}
+        {% render 'product-item', product: product %}
+    {% endfor %}
+
+    {{ paginate | default_pagination }}
+{% endpaginate %}

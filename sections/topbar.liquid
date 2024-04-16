@@ -1,0 +1,51 @@
+{% if section.settings.topbar_show %}
+    <div>
+        <p class="announcements">{{ section.settings.topbar_announcement }}</p>
+    </div>
+{% endif %}
+
+
+<style>
+    /* settings stuff here */
+    .announcements {
+        background-color: {{ section.settings.topbar_bg_color }};
+    }
+</style>
+
+{% stylesheet %}
+{% comment %}/* none settings stuff here */{% endcomment %}
+.announcements {
+padding: 20px;
+}
+{% endstylesheet %}
+
+{% javascript %}
+console.log("hey from header");
+{% endjavascript %}
+
+
+{% schema %}
+{
+  "name": "settings",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "topbar_show",
+      "label": "show top bar?",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "topbar_bg_color",
+      "label": "top bar background color?",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "topbar_announcement",
+      "label": "announcement text?",
+      "default": "special website rework on progress"
+    }
+  ]
+}
+{% endschema %}

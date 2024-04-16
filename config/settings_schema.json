@@ -1,0 +1,38 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "yake",
+    "theme_version": "1.0.0",
+    "theme_author": "Joe Zou",
+    "theme_documentation_url": "https://wokcity.eu/themes",
+    "theme_support_url": "https://wokcity.eu"
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "colors_bg",
+        "label": "Background color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "checkbox",
+        "id": "colors_dark_mode",
+        "label": "enable dark theme",
+        "default": false
+      }
+    ]
+  },
+  {
+    "name": "Settings",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "settings_show_search",
+        "label": "show search form",
+        "default": true
+      }
+    ]
+  }
+]

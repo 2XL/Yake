@@ -1,0 +1,30 @@
+<h1>
+{{ page.title }}    page
+</h1>
+
+<div>
+    {{ page.content }}
+</div>
+
+{% layout 'theme' %}
+
+{% form 'contact', id: 'contact_form' %}
+    <div class="page-width">
+        <div class="form-vertical">
+            {% comment %}<label for="ContactFormName" class="label--hidden">Name</label>{% endcomment %}
+            {% comment %}<input type="text" id="ContactFormName" name="contact[name]" placeholder="Your Name" required>{% endcomment %}
+
+            <label for="ContactFormEmail" class="label--hidden">Email</label>
+            <input type="email" id="ContactFormEmail" name="contact[email]" placeholder="Email" required>
+
+            {% comment %}<label for="ContactFormPhone" class="label--hidden">Phone Number</label>{% endcomment %}
+            {% comment %}<input type="tel" id="ContactFormPhone" name="contact[phone]" placeholder="Phone Number">{% endcomment %}
+
+            <label for="ContactFormMessage" class="label--hidden">Message</label>
+            <textarea rows="10" id="ContactFormMessage" name="contact[body]" placeholder="Your Message" required></textarea>
+
+            <input type="submit" class="btn" value="Send">
+        </div>
+    </div>
+{% endform %}
+

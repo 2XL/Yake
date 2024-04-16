@@ -1,0 +1,8 @@
+<header>
+    FOOTER SNIPPETS
+    <ul>
+        {% for link in linklists.footer.links -%}
+            <li> {{ link.title | link_to: link.url }} </li>
+        {%- endfor %}
+    </ul>
+</header>

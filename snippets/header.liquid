@@ -1,0 +1,20 @@
+<header>
+
+    HEADER SNIPPETS
+
+    <h1>{{ shop.name }}</h1>
+
+    <ul>
+        {% for link in linklists.main-menu.links -%}
+            <li> {{ link.title | link_to: link.url }} </li>
+        {%- endfor %}
+    </ul>
+
+    {% if settings.settings_show_search %}
+        <form action="/search">
+            <input type="search" name="q">
+            <button type="submit">find</button>
+        </form>
+    {% endif %}
+
+</header>
