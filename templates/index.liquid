@@ -1,32 +1,6 @@
 INDEX PAGE
 
 
-{% comment %}{% for collection in collections %}{% endcomment %}
-{% comment %}{{- collection.title | link_to: collection.url }}{% endcomment %}
-{% comment %}{% endcomment %}
-{% comment %}{% endcomment %}
-{% comment %}<h2>{{ collection.title }}</h2>{% endcomment %}
-{% comment %}{% endcomment %}
-{% comment %}{% for product in collection.products %}{% endcomment %}
-{% comment %}1{% endcomment %}
-{% comment %}<div>{% endcomment %}
-{% comment %}1 one{% endcomment %}
-{% comment %}<img src="{{ product.featured_image }}"/>{% endcomment %}
-{% comment %}<h3>   {{ product.title }}</h3>{% endcomment %}
-{% comment %}<p>   {{ product.price }}</p>{% endcomment %}
-{% comment %}</div>{% endcomment %}
-{% comment %}{{- product.title | link_to: product.url }}{% endcomment %}
-{% comment %}{% endfor %}{% endcomment %}
-{% comment %}{% endcomment %}
-{% comment %}{% endcomment %}
-{% comment %}{% endfor %}{% endcomment %}
 
 
-<hr></hr>
 
-
-<h2>{{ collections['yake'].title }}</h2>
-
-{% for product in collections['yake'].products %}
-    {% render 'product-item', product: product %}
-{% endfor %}
